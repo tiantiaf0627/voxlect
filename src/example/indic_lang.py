@@ -81,6 +81,9 @@ if __name__ == '__main__':
             freeze_params=True, 
             use_conv_output=True
         ).to(device)
+
+    model.load_state_dict(torch.load(str(log_dir.joinpath(f'fold_1.pt')), weights_only=True), strict=False)
+    model.load_state_dict(torch.load(str(log_dir.joinpath(f'fold_lora_1.pt'))), strict=False)
     model.eval()
     
     max_audio_length = 15 * 16000
