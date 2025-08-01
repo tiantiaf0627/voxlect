@@ -61,7 +61,7 @@ dialect_label_list = [
 device = torch.device("cuda") if torch.cuda.is_available() else "cpu"
 
 # Load model from Huggingface
-whisper_model = WhisperWrapper.from_pretrained("tiantiaf/voxlect-mandarin-cantonese-whisper-large-v3").to(device)
+whisper_model = WhisperWrapper.from_pretrained("tiantiaf/voxlect-mandarin-cantonese-dialect-whisper-large-v3").to(device)
 whisper_model.eval()
 
 # Load data, here just zeros as the example
@@ -97,7 +97,7 @@ spanish_dialect_list = [
 device = torch.device("cuda") if torch.cuda.is_available() else "cpu"
 
 # Load model from Huggingface
-mms_model = MMSWrapper.from_pretrained("tiantiaf/voxlect-spanish-mms-lid-256").to(device)
+mms_model = MMSWrapper.from_pretrained("tiantiaf/voxlect-spanish-dialect-mms-lid-256").to(device)
 mms_model.eval()
 
 # Load data, here just zeros as the example
