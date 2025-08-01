@@ -111,9 +111,9 @@ Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output |
 |--------------------------------------------------------|-------|-----------------|-----------------|-------------|------------------------|------------------------|
 | [tiantiaf/voxlect-spanish-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-spanish-whisper-large-v3)   | CommonVoice+Latin American Spanish | whisper-large-v3              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
 
-### Responsible Use: Users should respect the privacy and consent of the data subjects, and adhere to the relevant laws and regulations in their jurisdictions when using Voxlect.
+#### Responsible Use: Users should respect the privacy and consent of the data subjects, and adhere to the relevant laws and regulations in their jurisdictions when using Voxlect.
 
-### If you like our work or use the models in your work, kindly cite the following. We appreciate your recognition!
+#### If you like our work or use the models in your work, kindly cite the following. We appreciate your recognition!
 ```
 @article{feng2025voxlect,
   title={Voxlect: A Speech Foundation Model Benchmark for Modeling Dialects and Regional Languages Around the Globe},
