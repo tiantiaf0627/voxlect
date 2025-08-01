@@ -19,6 +19,12 @@ In Voxlect, we experiments with the following datasets to predict dialects or re
 
 #### Our training data filters output audio shorter than 3 seconds (unreliable predictions) and longer than 15 seconds (computation limitation), so you need to cut your audio to a maximum of 15 seconds, 16kHz and mono channel. We also subsample datasets like IndicVoices and CORRA, so you may see noticeable smaller training sample size than original datasets.
 
+### Benchmark Performance
+
+<div align="center">
+ <img src="img/dialect_result.png" width="600px">
+</div>
+
 ### Download Repo
 ```bash
 git clone git@github.com:tiantiaf0627/voxlect.git
