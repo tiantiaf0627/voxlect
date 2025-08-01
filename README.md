@@ -14,7 +14,7 @@ We report benchmark evaluations on dialects and regional language varieties in *
 In Voxlect, we experiments with the following datasets to predict dialects or regional languages. Our labeling is described below:
 
 <div align="center">
- <img src="img/dialect_labels.png" width="600px">
+ <img src="img/dialect_labels.png" width="800px">
 </div>
 
 #### Our training data filters output audio shorter than 3 seconds (unreliable predictions) and longer than 15 seconds (computation limitation), so you need to cut your audio to a maximum of 15 seconds, 16kHz and mono channel. We also subsample datasets like IndicVoices and CORRA, so you may see noticeable smaller training sample size than original datasets.
@@ -22,7 +22,7 @@ In Voxlect, we experiments with the following datasets to predict dialects or re
 ### Benchmark Performance
 
 <div align="center">
- <img src="img/dialect_result.png" width="600px">
+ <img src="img/dialect_result.png" width="800px">
 </div>
 
 ### Download Repo
@@ -118,13 +118,13 @@ print(spanish_dialect_list[torch.argmax(mms_prob).detach().cpu().item()])
 
  Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output | Example Code |
 |--------------------------------------------------------|-------|-----------------|-----------------|-------------|------------------------|------------------------|
-| [tiantiaf/voxlect-spanish-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-spanish-mms-lid-256)   | CommonVoice+Latin American Spanish | mms-lid-256              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
+| [tiantiaf/voxlect-spanish-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-spanish-dialect-mms-lid-256)   | CommonVoice+Latin American Spanish | mms-lid-256              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
 
 
 ### Whisper-Large V3 Models
 Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output | Example Code |
 |--------------------------------------------------------|-------|-----------------|-----------------|-------------|------------------------|------------------------|
-| [tiantiaf/voxlect-spanish-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-spanish-whisper-large-v3)   | CommonVoice+Latin American Spanish | whisper-large-v3              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
+| [tiantiaf/voxlect-spanish-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-spanish-dialect-whisper-large-v3)   | CommonVoice+Latin American Spanish | whisper-large-v3              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
 
 #### Responsible Use: Users should respect the privacy and consent of the data subjects, and adhere to the relevant laws and regulations in their jurisdictions when using Voxlect.
 
