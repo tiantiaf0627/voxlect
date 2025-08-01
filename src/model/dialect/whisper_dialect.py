@@ -1,17 +1,13 @@
-# part of the code was referenced from SUPERB: https://github.com/s3prl/s3prl
-# and https://github.com/wngh1187/IPET/blob/main/Speechcommands_V2/W2V2/models/W2V2.py
 import os
 import pdb
 import copy
 import torch
-import argparse
-import numpy as np
 import loralib as lora
 import transformers.models.whisper.modeling_whisper as whisper
 
 from torch import nn
-from torch.nn import functional as F
 from transformers.activations import ACT2FN
+from huggingface_hub import PyTorchModelHubMixin
 from transformers import WhisperModel, AutoFeatureExtractor
 
 import sys
@@ -91,7 +87,11 @@ class WhisperEncoderLayer(nn.Module):
 
         return outputs
    
-class WhisperWrapper(nn.Module):
+class WhisperWrapper(
+    nn.Module,
+    PyTorchModelHubMixin, 
+    repo_url="https://github.com/tiantiaf0627/voxlect"
+):
     def __init__(
         self, 
         pretrain_model="whisper_large",

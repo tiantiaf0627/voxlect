@@ -1,16 +1,12 @@
-import os
-import pdb
-import copy
 import torch
-import argparse
-import numpy as np
 import loralib as lora
 import transformers.models.wav2vec2.modeling_wav2vec2 as w2v2
 
 from torch import nn
 from torch.nn import functional as F
-from transformers import Wav2Vec2Model, AutoProcessor
-from transformers import Wav2Vec2ForSequenceClassification, AutoFeatureExtractor
+from transformers import Wav2Vec2Model
+from transformers import AutoFeatureExtractor
+from huggingface_hub import PyTorchModelHubMixin
 
 class Wav2Vec2EncoderLayer(nn.Module):
     def __init__(
@@ -131,7 +127,11 @@ class Wav2Vec2EncoderLayerStableLayerNorm(nn.Module):
 
         return outputs
 
-class MMSWrapper(nn.Module):
+class MMSWrapper(
+    nn.Module,
+    PyTorchModelHubMixin, 
+    repo_url="https://github.com/tiantiaf0627/voxlect"
+):
     def __init__(
         self,
         pretrain_model="mms-lid-256", 
