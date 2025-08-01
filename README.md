@@ -6,9 +6,18 @@
   <a href="https://huggingface.co/collections/tiantiaf/voxlect-mms-lid-256-688ac8b901116efa6ad5ab0f"><strong>[HuggingFace MMS-LID-256 Models]</strong></a> &nbsp;
 </p>
 
-#### In this repo, we present Voxlect, one of the first benchmarking efforts that predict dialects and regional languages worldwide using speech foundation models. 
+#### This repo presents Voxlect, a benchmark that predict dialects and regional languages worldwide using speech foundation models. 
 
-#### Our training data filters output audio shorter than 3 seconds (unreliable predictions) and longer than 15 seconds (computation limitation), so you need to cut your audio to a maximum of 15 seconds, 16kHz and mono channel
+We report benchmark evaluations on dialects and regional language varieties in *English, Arabic, Mandarin and Cantonese, Tibetan, Indic languages and Indian English, Thai, Spanish, French, German, Brazilian Portuguese, and Italian*. Our study used over 2 million training utterances from 30 publicly available speech corpora that are provided with dialectal information. 
+
+### Labeling Scheme
+In Voxlect, we experiments with the following datasets to predict dialects or regional languages. Our labeling is described below:
+
+<div align="center">
+ <img src="img/dialect_labels.png" width="600px">
+</div>
+
+#### Our training data filters output audio shorter than 3 seconds (unreliable predictions) and longer than 15 seconds (computation limitation), so you need to cut your audio to a maximum of 15 seconds, 16kHz and mono channel. We also subsample datasets like IndicVoices and CORRA, so you may see noticeable smaller training sample size than original datasets.
 
 ### Download Repo
 ```bash
