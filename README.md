@@ -8,7 +8,7 @@
 
 #### This repo presents Voxlect, a benchmark that predict dialects and regional languages worldwide using speech foundation models. 
 
-We report benchmark evaluations on dialects and regional language varieties in *English, Arabic, Mandarin and Cantonese, Tibetan, Indic languages and Indian English, Thai, Spanish, French, German, Brazilian Portuguese, and Italian*. Our study used over 2 million training utterances from 30 publicly available speech corpora that are provided with dialectal information. 
+We report benchmark evaluations on dialects and regional language varieties in *English, Arabic, Mandarin and Cantonese, Tibetan, Indic languages and Indian English, Thai, Spanish, French, German, Brazilian Portuguese, and Italian*. Our study used over 2 million training utterances from 30 publicly available speech corpora that are provided with dialectal (or accent) information. 
 
 ### Labeling Scheme
 In Voxlect, we experiments with the following datasets to predict dialects or regional languages. Our labeling is described below:
@@ -56,7 +56,7 @@ dialect_label_list = [
     "Mandarin",
     "Southwestern",
     "Zhongyuan",
-    "Yue"
+    "Cantonese"
 ]
     
 # Find device
