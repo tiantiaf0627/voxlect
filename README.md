@@ -25,6 +25,8 @@ In Voxlect, we experiments with the following datasets to predict dialects or re
  <img src="img/dialect_result.png" width="800px">
 </div>
 
+Compared to Vox-Profile, we use additional English speech data in ParaSpeechCaps and Timit that gains improved classification performance.
+
 ### Download Repo
 ```bash
 git clone git@github.com:tiantiaf0627/voxlect.git
