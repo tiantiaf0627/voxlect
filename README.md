@@ -136,6 +136,11 @@ Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output |
 
 #### Responsible Use: Users should respect the privacy and consent of the data subjects, and adhere to the relevant laws and regulations in their jurisdictions when using Voxlect.
 
+❌ **Out-of-Scope Use**
+- Clinical or diagnostic applications
+- Surveillance
+- Privacy-invasive applications
+
 #### If you like our work or use the models in your work, kindly cite the following. We appreciate your recognition!
 ```
 @article{feng2025voxlect,
