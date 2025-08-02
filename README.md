@@ -119,12 +119,16 @@ print(spanish_dialect_list[torch.argmax(mms_prob).detach().cpu().item()])
  Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output | Example Code |
 |--------------------------------------------------------|-------|-----------------|-----------------|-------------|------------------------|------------------------|
 | [tiantiaf/voxlect-spanish-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-spanish-dialect-mms-lid-256)   | CommonVoice+Latin American Spanish | mms-lid-256              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
+| [tiantiaf/voxlect-mandarin-cantonese-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-mandarin-cantonese-dialect-mms-lid-256)   | KeSpeech+CommonVoice-yue+CommonVoice-hk | mms-lid-256              | Yes              | 64              | Jiang-Huai,Jiao-Liao,Ji-Lu,Lan-Yin,Standard Mandarin,Southwestern,Zhongyuan,Cantonese |  |
+| [tiantiaf/voxlect-indic-lid-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-indic-lid-mms-lid-256)   | IndicVoices+CommonVoice-en | mms-lid-256              | Yes              | 64              | 22 Indic Languages (e.g. Hindi, Urdu, Telegu, Tamil) and Indian English |  |
 
 
 ### Whisper-Large V3 Models
 Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output | Example Code |
 |--------------------------------------------------------|-------|-----------------|-----------------|-------------|------------------------|------------------------|
 | [tiantiaf/voxlect-spanish-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-spanish-dialect-whisper-large-v3)   | CommonVoice+Latin American Spanish | whisper-large-v3              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
+| [tiantiaf/voxlect-mandarin-cantonese-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-mandarin-cantonese-dialect-whisper-large-v3)   | KeSpeech+CommonVoice-yue+CommonVoice-hk | whisper-large-v3              | Yes              | 64              | Jiang-Huai,Jiao-Liao,Ji-Lu,Lan-Yin,Standard Mandarin,Southwestern,Zhongyuan,Cantonese |  |
+| [tiantiaf/voxlect-indic-lid-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-indic-lid-whisper-large-v3)   | IndicVoices+CommonVoice-en | whisper-large-v3              | Yes              | 64              | 22 Indic Languages (e.g. Hindi, Urdu, Telegu, Tamil) and Indian English |  |
 
 #### Responsible Use: Users should respect the privacy and consent of the data subjects, and adhere to the relevant laws and regulations in their jurisdictions when using Voxlect.
 
