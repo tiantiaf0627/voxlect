@@ -17,7 +17,9 @@ In Voxlect, we experiments with the following datasets to predict dialects or re
  <img src="img/dialect_labels.png" width="800px">
 </div>
 
-#### Our training data filters output audio shorter than 3 seconds (unreliable predictions) and longer than 15 seconds (computation limitation), so you need to cut your audio to a maximum of 15 seconds, 16kHz and mono channel. We also subsample datasets like IndicVoices and CORRA, so you may see noticeable smaller training sample size than original datasets.
+#### Our training data filters output audio shorter than 3 seconds (unreliable predictions) and longer than 15 seconds (computation limitation), so you need to cut your audio to a maximum of 15 seconds, 16kHz and mono channel. 
+
+#### We also subsample datasets like IndicVoices and CORRA, so you may see noticeable smaller training sample size than original datasets.
 
 ### Benchmark Performance
 
@@ -25,7 +27,19 @@ In Voxlect, we experiments with the following datasets to predict dialects or re
  <img src="img/dialect_result.png" width="800px">
 </div>
 
-Compared to Vox-Profile, we use additional English speech data in ParaSpeechCaps and Timit that gains improved classification performance.
+Compared to Vox-Profile, we use additional English speech data in ParaSpeechCaps that gains improved classification performance.
+
+### Error Confusions
+
+We observe that geographic proximity is a "main" source of confusion, while this indicates the evolution of languages and dialects.
+
+<div align="center">
+ <img src="img/confusion_zh.png" width="400px">
+</div>
+
+<div align="center">
+ <img src="img/confusion_sp.png" width="400px">
+</div>
 
 ### Download Repo
 ```bash
@@ -124,6 +138,9 @@ print(spanish_dialect_list[torch.argmax(mms_prob).detach().cpu().item()])
 | [tiantiaf/voxlect-spanish-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-spanish-dialect-mms-lid-256)   | CommonVoice+Latin American Spanish | mms-lid-256              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
 | [tiantiaf/voxlect-mandarin-cantonese-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-mandarin-cantonese-dialect-mms-lid-256)   | KeSpeech+CommonVoice-yue+CommonVoice-hk | mms-lid-256              | Yes              | 64              | Jiang-Huai,Jiao-Liao,Ji-Lu,Lan-Yin,Standard Mandarin,Southwestern,Zhongyuan,Cantonese |  |
 | [tiantiaf/voxlect-indic-lid-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-indic-lid-mms-lid-256)   | IndicVoices+CommonVoice-en | mms-lid-256              | Yes              | 64              | 22 Indic Languages (e.g. Hindi, Urdu, Telegu, Tamil) and Indian English |  |
+| [tiantiaf/voxlect-thai-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-thai-dialect-mms-lid-256)   | Thai-Dialect-Corpus | mms-lid-256              | Yes              | 64              | Thai Central, Khummuang, Korat, Pattani |  |
+| [tiantiaf/voxlect-french-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-french-dialect-mms-lid-256)   | CommonVoice-fr+African Accented French | mms-lid-256              | Yes              | 64              | France, Africa, Canada, Swiss/Belgium/German |  |
+| [tiantiaf/voxlect-german-dialect-mms-lid-256](https://huggingface.co/tiantiaf/voxlect-german-dialect-mms-lid-256)   | CommonVoice-de | mms-lid-256              | Yes              | 64              | German-Non-NRW Area, German-NRW, Austria, Swiss, Other |  |
 
 
 ### Whisper-Large V3 Models
@@ -133,6 +150,9 @@ Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output |
 | [tiantiaf/voxlect-spanish-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-spanish-dialect-whisper-large-v3)   | CommonVoice+Latin American Spanish | whisper-large-v3              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
 | [tiantiaf/voxlect-mandarin-cantonese-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-mandarin-cantonese-dialect-whisper-large-v3)   | KeSpeech+CommonVoice-yue+CommonVoice-hk | whisper-large-v3              | Yes              | 64              | Jiang-Huai,Jiao-Liao,Ji-Lu,Lan-Yin,Standard Mandarin,Southwestern,Zhongyuan,Cantonese |  |
 | [tiantiaf/voxlect-indic-lid-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-indic-lid-whisper-large-v3)   | IndicVoices+CommonVoice-en | whisper-large-v3              | Yes              | 64              | 22 Indic Languages (e.g. Hindi, Urdu, Telegu, Tamil) and Indian English |  |
+| [tiantiaf/voxlect-thai-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-thai-dialect-whisper-large-v3)   | Thai-Dialect-Corpus | whisper-large-v3              | Yes              | 64              | Thai Central, Khummuang, Korat, Pattani |  |
+| [tiantiaf/voxlect-french-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-french-dialect-whisper-large-v3)   | CommonVoice-fr+African Accented French | whisper-large-v3              | Yes              | 64              | France, Africa, Canada, Swiss/Belgium/German |  |
+| [tiantiaf/voxlect-german-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-german-dialect-whisper-large-v3)   | CommonVoice-de | whisper-large-v3              | Yes              | 64              | German-Non-NRW Area, German-NRW, Austria, Swiss, Other |  |
 
 #### Responsible Use: Users should respect the privacy and consent of the data subjects, and adhere to the relevant laws and regulations in their jurisdictions when using Voxlect.
 
