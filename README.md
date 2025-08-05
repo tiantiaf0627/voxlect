@@ -1,7 +1,7 @@
 ## Voxlect: A Speech Foundation Model Benchmark for Modeling Dialects and Regional Languages Around the Globe
 
 <p align="center">
-  📄 <a href=""><strong>[Preprint Paper]</strong></a> &nbsp;|&nbsp;
+  📄 <a href="https://arxiv.org/abs/2508.01691"><strong>[Preprint Paper]</strong></a> &nbsp;|&nbsp;
   🤗 <a href="https://huggingface.co/collections/tiantiaf/voxlect-whisper-large-v3-68889785dedf366a1c939e81"><strong>[HuggingFace Whisper-Large v3 Models]</strong></a> &nbsp;
   <a href="https://huggingface.co/collections/tiantiaf/voxlect-mms-lid-256-688ac8b901116efa6ad5ab0f"><strong>[HuggingFace MMS-LID-256 Models]</strong></a> &nbsp;
 </p>
