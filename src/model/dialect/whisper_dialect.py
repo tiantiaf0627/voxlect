@@ -115,6 +115,7 @@ class WhisperWrapper(
                 ignore_mismatched_sizes=True,
                 max_source_positions=750,
             )
+            self.backbone_model.decoder = None
         elif self.pretrain_model == "whisper_base":
             self.backbone_model = WhisperModel.from_pretrained(
                 "openai/whisper-base",
@@ -129,6 +130,7 @@ class WhisperWrapper(
                 max_source_positions=750,
                 ignore_mismatched_sizes=True
             )
+            self.backbone_model.decoder = None
         elif self.pretrain_model == "whisper_medium":
             self.backbone_model = WhisperModel.from_pretrained(
                 "openai/whisper-medium",
