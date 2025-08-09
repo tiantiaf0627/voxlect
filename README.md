@@ -2,8 +2,10 @@
 
 <p align="center">
   📄 <a href="https://arxiv.org/abs/2508.01691"><strong>[Preprint Paper]</strong></a> &nbsp;|&nbsp;
-  🤗 <a href="https://huggingface.co/collections/tiantiaf/voxlect-whisper-large-v3-68889785dedf366a1c939e81"><strong>[HuggingFace Whisper-Large v3 Models]</strong></a> &nbsp;
-  <a href="https://huggingface.co/collections/tiantiaf/voxlect-mms-lid-256-688ac8b901116efa6ad5ab0f"><strong>[HuggingFace MMS-LID-256 Models]</strong></a> &nbsp;
+  🤗 
+  <a href="https://huggingface.co/collections/tiantiaf/voxlect-whisper-small-6894ee02181dce9b012dc04b"><strong>[Whisper-small Models]</strong></a> &nbsp; | &nbsp;
+  <a href="https://huggingface.co/collections/tiantiaf/voxlect-whisper-large-v3-68889785dedf366a1c939e81"><strong>[Whisper-Large v3 Models]</strong></a> &nbsp; | &nbsp;
+  <a href="https://huggingface.co/collections/tiantiaf/voxlect-mms-lid-256-688ac8b901116efa6ad5ab0f"><strong>[MMS-LID-256 Models]</strong></a> &nbsp;
 </p>
 
 #### This repo presents Voxlect, a benchmark that predict dialects and regional languages worldwide using speech foundation models. 
@@ -29,14 +31,16 @@ In Voxlect, we experiments with the following datasets to predict dialects or re
 
 Compared to Vox-Profile, we use additional English speech data in ParaSpeechCaps that gains improved classification performance.
 
-### Error Confusions
+### Error Confusions - Whisper-Large v3 model predictions
 
 We observe that geographic proximity is a "main" source of confusion, while this indicates the evolution of languages and dialects.
 
+#### Mandarin Dialects and Cantonese
 <div align="center">
  <img src="img/confusion_zh.png" width="400px">
 </div>
 
+#### Spanish Dialects
 <div align="center">
  <img src="img/confusion_sp.png" width="400px">
 </div>
@@ -154,6 +158,17 @@ Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output |
 | [tiantiaf/voxlect-french-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-french-dialect-whisper-large-v3)   | CommonVoice-fr+African Accented French | whisper-large-v3              | Yes              | 64              | France, Africa, Canada, Swiss/Belgium/German |  |
 | [tiantiaf/voxlect-german-dialect-whisper-large-v3](https://huggingface.co/tiantiaf/voxlect-german-dialect-whisper-large-v3)   | CommonVoice-de | whisper-large-v3              | Yes              | 64              | German-Non-NRW Area, German-NRW, Austria, Swiss, Other |  |
 
+### Whisper-small Models
+Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output | Example Code |
+|--------------------------------------------------------|-------|-----------------|-----------------|-------------|------------------------|------------------------|
+| [tiantiaf/voxlect-english-dialect-whisper-small](https://huggingface.co/tiantiaf/voxlect-english-dialect-whisper-small)   | 12 Datasets | whisper-small              | Yes              | 64              | 16 English Varieties |  |
+| [tiantiaf/voxlect-spanish-dialect-whisper-small](https://huggingface.co/tiantiaf/voxlect-spanish-dialect-whisper-small)   | CommonVoice+Latin American Spanish | whisper-small              | Yes              | 64              | Penisular, Mexican, Chileno, Andino-Pacífico, Central America and Caribbean, Rioplatense |  |
+| [tiantiaf/voxlect-mandarin-cantonese-dialect-whisper-small](https://huggingface.co/tiantiaf/voxlect-mandarin-cantonese-dialect-whisper-small)   | KeSpeech+CommonVoice-yue+CommonVoice-hk | whisper-small              | Yes              | 64              | Jiang-Huai,Jiao-Liao,Ji-Lu,Lan-Yin,Standard Mandarin,Southwestern,Zhongyuan,Cantonese |  |
+| [tiantiaf/voxlect-indic-lid-whisper-small](https://huggingface.co/tiantiaf/voxlect-indic-lid-whisper-small)   | IndicVoices+CommonVoice-en | whisper-small              | Yes              | 64              | 22 Indic Languages (e.g. Hindi, Urdu, Telegu, Tamil) and Indian English |  |
+| [tiantiaf/voxlect-thai-dialect-whisper-small](https://huggingface.co/tiantiaf/voxlect-thai-dialect-whisper-small)   | Thai-Dialect-Corpus | whisper-small              | Yes              | 64              | Thai Central, Khummuang, Korat, Pattani |  |
+| [tiantiaf/voxlect-french-dialect-whisper-small](https://huggingface.co/tiantiaf/voxlect-french-dialect-whisper-small)   | CommonVoice-fr+African Accented French | whisper-small              | Yes              | 64              | France, Africa, Canada, Swiss/Belgium/German |  |
+| [tiantiaf/voxlect-german-dialect-whisper-small](https://huggingface.co/tiantiaf/voxlect-german-dialect-whisper-small)   | CommonVoice-de | whisper-small              | Yes              | 64              | German-Non-NRW Area, German-NRW, Austria, Swiss, Other |  |
+
 #### Responsible Use: Users should respect the privacy and consent of the data subjects, and adhere to the relevant laws and regulations in their jurisdictions when using Voxlect.
 
 ❌ **Out-of-Scope Use**
@@ -166,6 +181,7 @@ Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output |
 @article{feng2025voxlect,
   title={Voxlect: A Speech Foundation Model Benchmark for Modeling Dialects and Regional Languages Around the Globe},
   author={Feng, Tiantian and Huang, Kevin and Xu, Anfeng and Shi, Xuan and Lertpetchpun, Thanathai and Lee, Jihwan and Lee, Yoonjeong and Byrd, Dani and Narayanan, Shrikanth},
+  journal={arXiv preprint arXiv:2508.01691},
   year={2025}
 }
 ```
