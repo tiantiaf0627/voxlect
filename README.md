@@ -99,7 +99,7 @@ print(dialect_label_list[torch.argmax(whisper_prob).detach().cpu().item()])
 #### For example, the Sichuan speech dialects generated from the  <a href="https://arxiv.org/abs/2412.10117"><strong>CosyVoice2:
 
 <audio controls>
-  <source src="example_audios/Sichuan_1000238_4_0.wav" type="audio/wav">
+  <source src="example_audios/Sichuan_1000238_4_0.wav">
   Unsupported audio format.
 </audio>
 
@@ -121,7 +121,7 @@ Dialect: Yue              Probability: 0.000
 #### For example, the Tianjin speech dialects generated from the <a href="https://arxiv.org/abs/2412.10117"><strong>CosyVoice2:
 
 <audio controls>
-  <source src="example_audios/Tianjin_1002906_0_0.wav" type="audio/wav">
+  <source src="example_audios/Tianjin_1002906_0_0.wav">
   Unsupported audio format.
 </audio>
 
