@@ -212,6 +212,7 @@ Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output |
 - Surveillance
 - Privacy-invasive applications
 - Some models may use licenses specifying no commercial use (like Mandarin dialect prediction), given the training dataset specification
+- All MMS models are for no commercial use
 
 #### If you like our work or use the models in your work, kindly cite the following. We appreciate your recognition!
 ```
