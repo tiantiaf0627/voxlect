@@ -211,7 +211,7 @@ Model Name  | Data  | Pre-trained Model | Use LoRa |  LoRa Rank Size  | Output |
 - Clinical or diagnostic applications
 - Surveillance
 - Privacy-invasive applications
-- No commercial use
+- No commercial use (Research use only)
 
 #### If you like our work or use the models in your work, kindly cite the following. We appreciate your recognition!
 ```
