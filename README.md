@@ -96,6 +96,53 @@ whisper_prob = F.softmax(whisper_logits, dim=1)
 print(dialect_label_list[torch.argmax(whisper_prob).detach().cpu().item()])
 ```
 
+#### For example, the Sichuan speech dialects generated from the  <a href="https://arxiv.org/abs/2412.10117"><strong>CosyVoice2:
+
+<audio controls>
+  <source src="example_audios/Sichuan_1000238_4_0.wav" type="audio/mp3">
+  Unsupported audio format.
+</audio>
+
+[Download Example](example_audios/Sichuan_1000238_4_0.wav)
+
+Using the Voxlect, we obtain the following probability
+```
+Dialect: Jiang-Huai       Probability: 0.001
+Dialect: Jiao-Liao        Probability: 0.001
+Dialect: Ji-Lu            Probability: 0.009
+Dialect: Lan-Yin          Probability: 0.000
+Dialect: Mandarin         Probability: 0.002
+Dialect: Southwestern     Probability: 0.981 (Target dialect)
+Dialect: Zhongyuan        Probability: 0.006
+Dialect: Yue              Probability: 0.000
+```
+
+
+#### For example, the Tianjin speech dialects generated from the <a href="https://arxiv.org/abs/2412.10117"><strong>CosyVoice2:
+
+<audio controls>
+  <source src="example_audios/Tianjin_1002906_0_0.wav" type="audio/mp3">
+  Unsupported audio format.
+</audio>
+
+[Download Example](example_audios/Tianjin_1002906_0_0.wav)
+
+Using the Voxlect, we obtain the following probability
+```
+Dialect: Jiang-Huai       Probability: 0.002
+Dialect: Jiao-Liao        Probability: 0.051
+Dialect: Ji-Lu            Probability: 0.169 (Target dialect)
+Dialect: Lan-Yin          Probability: 0.001
+Dialect: Mandarin         Probability: 0.765
+Dialect: Southwestern     Probability: 0.000 
+Dialect: Zhongyuan        Probability: 0.013
+Dialect: Yue              Probability: 0.000
+```
+If you are a Mandarin speaker, you will notice that the first 2 words are spoken likely to be Tianjin dialect, but after that, the generated speech sounds more like standard Mandarin, and our model captures this correctly.
+
+
+
+
 ### Quick Example 2 - MMS-LID-256 Spanish Dialect 
 ```python
 # Load libraries
