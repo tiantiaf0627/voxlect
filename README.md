@@ -98,12 +98,7 @@ print(dialect_label_list[torch.argmax(whisper_prob).detach().cpu().item()])
 
 #### For example, the Sichuan speech dialects generated from the  <a href="https://arxiv.org/abs/2412.10117"><strong>CosyVoice2:
 
-<audio controls>
-  <source src="https://raw.githubusercontent.com/tiantiaf0627/voxlect/main/example_audios/Sichuan_1000238_4_0.mp3" type="audio/mpeg">
-  Unsupported audio format.
-</audio>
-
-[Download Example](https://github.com/tiantiaf0627/voxlect/blob/main/example_audios/Sichuan_1000238_4_0.mp3)
+[example_audios/Sichuan_1000238_4_0.mp3](https://raw.githubusercontent.com/tiantiaf0627/voxlect/main/example_audios/Sichuan_1000238_4_0.wav)
 
 Using the Voxlect, we obtain the following probability
 ```
@@ -117,15 +112,9 @@ Dialect: Zhongyuan        Probability: 0.006
 Dialect: Yue              Probability: 0.000
 ```
 
-
 #### For example, the Tianjin speech dialects generated from the <a href="https://arxiv.org/abs/2412.10117"><strong>CosyVoice2:
 
-<audio controls>
-  <source src="example_audios/Tianjin_1002906_0_0.mp3?raw=1" type="audio/mpeg">
-  Unsupported audio format.
-</audio>
-
-[Download Example](example_audios/Tianjin_1002906_0_0.mp3)
+[example_audios/Tianjin_1002906_0_0.wav](https://raw.githubusercontent.com/tiantiaf0627/voxlect/main/example_audios/Tianjin_1002906_0_0.wav)
 
 Using the Voxlect, we obtain the following probability
 ```
