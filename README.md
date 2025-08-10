@@ -99,11 +99,11 @@ print(dialect_label_list[torch.argmax(whisper_prob).detach().cpu().item()])
 #### For example, the Sichuan speech dialects generated from the  <a href="https://arxiv.org/abs/2412.10117"><strong>CosyVoice2:
 
 <audio controls>
-  <source src="example_audios/Sichuan_1000238_4_0.wav">
+  <source src="https://github.com/tiantiaf0627/voxlect/blob/main/example_audios/Sichuan_1000238_4_0.wav">
   Unsupported audio format.
 </audio>
 
-[Download Example](example_audios/Sichuan_1000238_4_0.wav)
+[Download Example](https://github.com/tiantiaf0627/voxlect/blob/main/example_audios/Sichuan_1000238_4_0.wav)
 
 Using the Voxlect, we obtain the following probability
 ```
